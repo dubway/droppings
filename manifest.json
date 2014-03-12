@@ -1,0 +1,22 @@
+{
+  "name": "Drop-pings",
+  "version": "1.1",
+  "description":
+    "Unconventional inspirational drops to brighten your day",
+    "icons": { "128": "icon.png" },
+  "permissions": [
+    "notifications",
+    "http://onemorepixel.cc/*",
+    "http://yui.yahooapis.com/pure/*"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"]
+    },
+  "manifest_version": 2,
+
+  "web_accessible_resources": [
+    "48.png",
+    "128.png"
+  ]
+}
