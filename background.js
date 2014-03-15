@@ -16,11 +16,11 @@ return xhttp.responseXML;
 function show() {
   //load XML
   var xmlDoc=loadXMLDoc("http://onemorepixel.cc/content/game.xml");
-  var main = xmlDoc.getElementsByTagName("library")[0];
+  var main = xmlDoc.getElementsByTagName("library");
   var quote = xmlDoc.getElementsByTagName("quote")[1];
   var author = xmlDoc.getElementsByTagName("author")[1].childNodes[0].nodeValue;
 
-  var randomNum = Math.floor(Math.random() * (26 - 0 + 1)) + 0;
+  var randomNum = Math.floor(Math.random() * (main.length - 0 + 1)) + 0;
   var text = xmlDoc.getElementsByTagName("text")[randomNum].childNodes[0].nodeValue;
 
 
