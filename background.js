@@ -6,6 +6,7 @@ var xmlDoc=loadXMLDoc("https://droppings.herokuapp.com/data.xml");
 var main = xmlDoc.getElementsByTagName("library");
 var quote = xmlDoc.getElementsByTagName("quote");
 var author = xmlDoc.getElementsByTagName("author");
+var iconAuthor;
 
 var roulette;
 var icon;
@@ -35,15 +36,19 @@ function show() {
   var catName = returnCategoryName(cat)
   var text = getCategory(catName, roulette);
 
-  //var icon = checkIcons(catName);
-
-
   // Notification API
   var time = /(..)(:..)/.exec(new Date());     // The prettyprinted time.
   var hour = time[1] % 12 || 12;               // The prettyprinted hour.
   var period = time[1] < 12 ? 'a.m.' : 'p.m.'; // The period of the day.
+
+  if(iconAuthor == "DanO"){
+    icon = "dano.png";
+  } else {
+    icon = catName+".png";
+  }
+
   var notification = window.webkitNotifications.createNotification(
-    '64.png',                       // The image.
+    icon,                       // The image.
     hour + time[2] + ' ' + period + ' | ' + catName,  // The title.
     text                            // The body.
   );
@@ -77,6 +82,7 @@ function checkRoulette(){
 
 function checkIcons(catName, byName){
   console.log(catName + " " + byName);
+  iconAuthor = byName;
 }
 
 function returnCategoryName(cat){

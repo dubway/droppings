@@ -1,6 +1,6 @@
 {
   "name": "Drop-pings",
-  "version": "1.1",
+  "version": "2.0",
   "description":
     "Unconventional inspirational drops to brighten your day",
     "icons": { "128": "icon.png" },
@@ -18,6 +18,13 @@
 
   "web_accessible_resources": [
     "48.png",
+    "itp.png",
+    "life.png",
+    "people.png",
+    "sex.png",
+    "tech.png",
+    "things.png",
+    "work.png",
     "128.png"
   ]
 }
