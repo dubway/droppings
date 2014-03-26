@@ -2,7 +2,7 @@
 var selectedCategories;
 
 // XML Parser
-var xmlDoc=loadXMLDoc("http://onemorepixel.cc/content/game.xml");
+var xmlDoc=loadXMLDoc("https://droppings.herokuapp.com/data.xml");
 var main = xmlDoc.getElementsByTagName("library");
 var quote = xmlDoc.getElementsByTagName("quote");
 var author = xmlDoc.getElementsByTagName("author");

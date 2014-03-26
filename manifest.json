@@ -7,6 +7,7 @@
   "permissions": [
     "notifications",
     "http://onemorepixel.cc/*",
+    "https://droppings.herokuapp.com/*",
     "http://yui.yahooapis.com/pure/*"
   ],
   "options_page": "options.html",
